@@ -1,0 +1,61 @@
+from random import * #imports random number generator
+from time import sleep
+print ("Welcome to dice rolling. You will be rolling a pair of standard dice.")
+times=int(input("How many times would you like to roll the dice? "))
+count_1=0
+count_2=0
+count_3=0
+count_4=0
+count_5=0
+count_6=0
+total=0
+for roll in range(times):
+    x=randint(1,6)
+    y=randint(1,6)
+    points=x+y
+    if x==1 and y==1:
+        count_1=count_1+2
+    elif x==1 or y==1:
+        count_1=count_1+1
+    if x==2 and y==2:
+        count_2=count_2+2
+    elif x==2 or y==2:
+        count_2=count_2+1
+    if x==3 and y==3:
+        count_2=count_3+2
+    elif x==3 or y==3:
+        count_3=count_3+1
+    if x==4 and y==4:
+        count_4=count_4+2
+    elif x==4 or y==4:
+        count_4=count_4+1
+    if x==5 and y==5:
+        count_5=count_5+2
+    elif x==5 or y==5:
+        count_5=count_5+1
+    if x==6 and y==6:
+        count_6=count_6+2
+    elif x==6 or y==6:
+        count_6=count_6+1
+    x=str(x)
+    y=str(y)
+    total=points+total
+    points=str(points)
+    roll_count=str(roll+1)
+    print("Roll " + roll_count + ": " + x +" & "+ y)
+    print("Points: " + points)
+    sleep(1)
+count_1=str(count_1)
+count_2=str(count_2)
+count_3=str(count_3)
+count_4=str(count_4)
+count_5=str(count_5)
+count_6=str(count_6)
+total=str(total)
+print("Number of times you rolled 1: " + count_1)
+print("Number of times you rolled 2: " + count_2)
+print("Number of times you rolled 3: " + count_3)
+print("Number of times you rolled 4: " + count_4)
+print("Number of times you rolled 5: " + count_5)
+print("Number of times you rolled 6: " + count_6)
+print("Total points: " + total)
