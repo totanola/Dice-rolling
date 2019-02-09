@@ -1,0 +1,21 @@
+import numpy as np
+from random import * #imports random number generator
+from time import sleep
+print ("Welcome to dice rolling. You will be rolling a pair of standard dice.")
+times=int(input("How many times would you like to roll the dice? "))
+count=[0]*6
+total=0
+for roll in range(times):
+    x=randint(0,5)
+    y=randint(0,5)
+    count[x]=count[x]+1
+    count[y]=count[y]+1
+    points=x+y+2
+    total=points+total
+    roll_count=str(roll+1)
+    print("Roll " + roll_count + ": " + str(x+1) +" & "+ str(y+1))
+    print("Points: " + str(points))
+    sleep(1)
+for n in range(0,6):
+    print("Number of times you rolled " + str(n+1) + ": " + str(count[n]))
+print("Total points: " + str(total))
